@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Random Password Generator</title>
+</head>
+<body>
+  <p class="top" href="https://twitter.com/erRaghavKhanna"> BY - Raghav Khanna</p>
+
+  <div class="container">
+    <h1 class="title">Random Password Generator</h1>
+    <h2 class="password-display" id="passwordDisplay">You Generated password will appear here</h2>
+    <form id="passwordGeneratorForm" class="form">
+      <label for="characterAmountNumber">Number Of Characters</label>
+      <div class="character-amount-container">
+        <input type="range" min="1" max="50" value="10" id="characterAmountRange">
+        <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="code">
+
+      <br>
+     <li> <label for="includeUppercase">Include Uppercase</label>
+      <input type="checkbox" id="includeUppercase"></li>
+      <br>
+
+    <li> <label for="includeNumbers">Include Numbers</label>
+      <input type="checkbox" id="includeNumbers"></li>
+      <br>
+    <li> <label for="includeSymbols">Include Symbols</label>
+      <input type="checkbox" id="includeSymbols"></li>
+      <br>
+      </div>
+      <br>
+      
+      <div class="rainbow">
+        <button  class="btn draw-border" id = "button" onclick = "generatePassword()">  
+          Generate Password 
+       </button> 
+          
+      </div>
+    </form>
+  </div>
+  <p>About Tool-<br>
+    <br>
+    What is this?<br>
+    <br>
+A simple javascript password generator, giving you choices about what characters you want to use to make up the password
+<br>
+<br>
+Isn't it a bad idea to have some website generate my password?
+The password is generated in your browser;
+<br> this tool does not transfer your password anywhere.
+<br>
+Is is cryptographically secure?
+No. It's uses javascript's Math.random(),<br> see http://stackoverflow.com/questions/5651789/is-math-random-cryptographically-secure. That doesn't mean it's useless though, it's still better than using 'password123' for each of your passwords.
+<br><br>
+Why is the javascript embedded within the html?
+So you can just download the file and run it locally if you'd feel more comfortable using it that way.
+<br>
+Disclaimer<br><br>
+I am not responsible for anything bad that happens as a result of your use of this tool or its code. This tool is meant purely for education. Password security is an important and complex topic and you should not blindly trust some random guy on the internet.
+  </p>
+  <footer> Made by 
+    <button class="twitter"><a href="https://mobile.twitter.com/erraghavkhanna"><i  style="text-decoration: underline;" class="fa fa-twitter"></i> Raghav Khanna </a></button>
+    </footer>
+</body>
+</html>
